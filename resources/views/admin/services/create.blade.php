@@ -39,7 +39,7 @@
 
                 <div class="form-group">
                     <label>link</label>
-                    <input type="date" name="link" class="form-control" value="{{ old('link') }}">
+                    <input type="text" name="link" class="form-control" value="{{ old('link') }}">
                 </div>
 
 

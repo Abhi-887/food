@@ -25,7 +25,7 @@ class ServicesRequest extends FormRequest
             'color' => ['required', 'max:255'],
             'icon' => ['required', 'max:50'],
             'title' => ['required', 'max:250'],
-            'description' => ['required', 'text'],
+            'description' => ['required', 'max:2550'],
             'link' => ['required', 'max:250'],
 
             'status' => ['required', 'boolean']

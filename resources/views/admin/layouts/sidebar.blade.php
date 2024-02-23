@@ -115,13 +115,14 @@
 
 
         <li class="dropdown {{ setSidebarActive([
-            'admin.why-choose-us.*',
-            'admin.banner-slider.*',
-            'admin.chefs.*',
-            'admin.app-download.index',
-            'admin.testimonial.*',
+           ' admin.hero.index',
+            'admin.services.*',
+            'admin.about-section.index',
+
+
             'admin.counter.index'
         ]) }}">
+
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-stream"></i>
                 <span>Sections </span></a>
             <ul class="dropdown-menu">
@@ -133,9 +134,46 @@
                 <li class="{{ setSidebarActive(['admin.testimonial.*']) }}"><a class="nav-link" href="{{ route('admin.testimonial.index') }}">Testimonial</a></li> --}}
                 <li class="{{ setSidebarActive(['admin.hero.index']) }}"><a class="nav-link" href="{{ route('admin.hero.index') }}">Hero-Section</a></li>
                 <li class="{{ setSidebarActive(['admin.counter.index']) }}"><a class="nav-link" href="{{ route('admin.counter.index') }}">Counter</a></li>
+                <li class="{{ setSidebarActive(['admin.services.*']) }}" ><a class="nav-link" href="{{ route('admin.services.index') }}">Services</a></li>
                 <li class="{{ setSidebarActive(['admin.about-section.index']) }}"><a class="nav-link" href="{{ route('admin.about-section.index') }}">About-section</a></li>
             </ul>
         </li>
+
+        {{-- <li class="dropdown {{ setSidebarActive([
+            'admin.coupon.*',
+            'admin.delivery-area.*',
+            'admin.payment-setting.index',
+        ]) }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i>
+                <span> Manage Ecommerce </span></a>
+            <ul class="dropdown-menu">
+                <li class="{{ setSidebarActive(['admin.coupon.*']) }}" ><a class="nav-link" href="{{ route('admin.coupon.index') }}">Coupon</a></li>
+                <li class="{{ setSidebarActive(['admin.delivery-area.*']) }}" ><a class="nav-link" href="{{ route('admin.delivery-area.index') }}">Delivery Areas</a></li>
+
+                <li class="{{ setSidebarActive(['admin.payment-setting.index']) }}" ><a class="nav-link" href="{{ route('admin.payment-setting.index') }}">Payment Gateways</a>
+                </li>
+
+            </ul>
+        </li> --}}
+
+        {{-- test route --}}
+
+        <li class="dropdown {{ setSidebarActive([
+            'admin.services.*',
+
+        ]) }}">
+         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i>
+            <span> test Ecommerce </span></a>
+        <ul class="dropdown-menu">
+            <li class="{{ setSidebarActive(['admin.services.*']) }}" ><a class="nav-link" href="{{ route('admin.services.index') }}">Services</a></li>
+
+            </li>
+
+        </ul>
+    </li>
+
+
+
 
         <li class="dropdown {{ setSidebarActive([
             'admin.custom-page-builder.*',

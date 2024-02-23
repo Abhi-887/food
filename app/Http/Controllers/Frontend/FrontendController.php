@@ -24,6 +24,7 @@ use App\Models\ProductRating;
 use App\Models\Reservation;
 use App\Models\SectionTitle;
 use App\Models\Slider;
+use App\Models\Services;
 use App\Models\Subscriber;
 use App\Models\Testimonial;
 use App\Models\TramsAndCondition;
@@ -58,6 +59,8 @@ class FrontendController extends Controller
         }])->with(['category', 'user'])->where('status', 1)->latest()->take(3)->get();
         $hero_section = Hero_section::first();
         $about_section = About_section::first();
+        $services = Services::where('status', 1)->get();
+
         return view('frontend.home.index',
             compact(
                 'sliders',
@@ -72,7 +75,8 @@ class FrontendController extends Controller
                 'counter',
                 'latestBlogs',
                 'hero_section',
-                'about_section'
+                'about_section',
+                'services'
 
             ));
     }

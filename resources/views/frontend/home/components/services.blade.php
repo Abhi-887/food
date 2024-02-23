@@ -1,5 +1,7 @@
 <section id="services" class="services">
 
+
+
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
@@ -67,4 +69,58 @@
 
     </div>
 
+
+
   </section>
+
+
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h2>Services</h2>
+            <p>What We Have To Offer</p>
+        </header>
+
+        <div class="row gy-4">
+            @foreach ($services as $service)
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                    <div class="service-box {{ $service['color'] }}">
+                        <i class="{{ $service['icon'] }} icon"></i>
+                        <h3>{{ $service['title'] }}</h3>
+                        <p>{{ $service['description'] }}</p>
+                        <a href="{{ $service['link'] }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+        <header class="section-header">
+            <h2>Services</h2>
+            <p>What We Have To Offer</p>
+        </header>
+
+        <div class="row gy-4">
+            @foreach ($services as $service)
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ $loop->iteration * 100 }}">
+                    <div class="service-box" style="background-color: {{ $service['color'] }};">
+                        <i class="{{ $service['icon'] }} icon"></i>
+                        <h3>{{ $service['title'] }}</h3>
+                        <p>{{ $service['description'] }}</p>
+                        <a href="{{ $service['link'] }}" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+
+

@@ -35,6 +35,7 @@ use App\Http\Controllers\Admin\ProductSizeController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\ReservationTimeController;
+use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SocialLinkController;
@@ -91,6 +92,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
 
     /** Coupon Routes */
     Route::resource('coupon', CouponController::class);
+
+    /** Coupon Routes */
+    Route::resource('services', ServicesController::class);
 
     /** Delivery Area Routes */
     Route::resource('delivery-area', DeliveryAreaController::class);
@@ -151,6 +155,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     /** Counter Routes */
     Route::get('counter', [CounterController::class, 'index'])->name('counter.index');
     Route::put('counter', [CounterController::class, 'update'])->name('counter.update');
+
 
     /** Blogs Category Routes */
     Route::resource('blog-category', BlogCategoryController::class);

@@ -1,5 +1,9 @@
 @extends('frontend.layouts.master')
 
+
+
+
+
 @section('content')
      <!-- ======= Hero Section ======= -->
 @include('frontend.home.components.hero')

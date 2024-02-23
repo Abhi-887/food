@@ -29,7 +29,11 @@
   <link href="{{ url('frontend') }}/assets/css/style.css" rel="stylesheet">
 
 
+
 </head>
+
+
+
 
 <body>
 
